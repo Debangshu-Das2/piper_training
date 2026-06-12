@@ -1,0 +1,24 @@
+# Python virtual environment & bundled runtime (never commit)
+.venv/
+.python/
+
+# Model checkpoints & weights (binary, >100MB, exceeds GitHub limits)
+checkpoints/
+
+# Dataset archives / Colab upload artifacts
+colab_upload/
+
+# Transcript plaintext is blocked by the corporate Zscaler DLP proxy on push,
+# so it is committed gzipped (.gz) instead. Restore with:
+#   python scripts/unpack_transcripts.py
+corpus/sentences.txt
+corpus/_ljs_filelist.txt
+data/*/metadata.csv
+data/*/piper_metadata.csv
+
+# Logs & caches
+*.log
+**/cache/
+**/work/
+__pycache__/
+*.pyc
